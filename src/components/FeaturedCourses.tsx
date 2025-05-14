@@ -11,55 +11,70 @@ interface Course {
   isFeatured: boolean
 }
 
-
-
 export default function FeaturedCourses() {
   const featuredCourses = courseData.courses.filter((course: Course) => course.isFeatured)
 
   return (
-    <div className="py-12 bg-gray-900">
-      <div>
-        <div className="text-center">
-          <h2 className=" text-sm md:text-md  mb-2 font-medium
-        bg-clip-text bg-gradient-to-b from-slate-50
-        to-yellow-500  text-transparent
-        ">FEATURED COURSES</h2>
-
-          <p className="text-3xl sm:text-4xl leading-8 
-         font-extrabold tracking-tight ">Learn with Best</p>
+    <section className="py-20 bg-gradient-to-b from-gray-900 to-gray-800 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <div className="animate-fade-in-up">
+            <p className="text-sm font-semibold tracking-wide uppercase text-indigo-400 mb-4">
+              Premium Learning
+            </p>
+            <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
+              Featured Courses
+            </h2>
+            <p className="mt-4 text-xl text-gray-300 max-w-2xl mx-auto">
+              Master your craft with our most popular courses
+            </p>
+          </div>
         </div>
-      </div>
 
-
-      <div className="mt-10">
-        <div className="grid grid-col-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 justify-center">
-          {featuredCourses.map((course: Course) => (
-            <div key={course.id} className="flex justify-center ">
-
-             
-
-              <div className="flex flex-col rounded-[22px] bg-white dark:bg-zinc-900 overflow-hidden h-full max-w-sm">
-                
-                <div className="p-4 sm:p-6 flex flex-col items-center text-center flex-grow">
-                   <GlowingEffect
-                blur={0}
-                borderWidth={3}
-                spread={80}
-                glow={true}
-                disabled={false}
-                proximity={64}
-                inactiveZone={0.01} />
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {featuredCourses.map((course: Course, index: number) => (
+            <div
+              key={course.id}
+              className="group relative animate-card-in"
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
+              <GlowingEffect
+          spread={40}
+          glow={true}
+          disabled={false}
+          proximity={64}
+          inactiveZone={0.01}
+        />
+              <div className="h-full bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 transition-all duration-300 group-hover:bg-gray-800/70 border border-gray-700/30 group-hover:border-indigo-400/20">
+                <div className="flex flex-col h-full">
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold text-white mb-3">
+                      {course.title}
+                    </h3>
+                    <p className="text-gray-400 text-sm leading-relaxed mb-4">
+                      {course.description}
+                    </p>
+                  </div>
                   
-                  <p className="text-lg sm:text-xl text-black mt-4 mb-2 dark:text-neutral-200">{course.title}</p>
-                  <p className="text-sm text-neutral-600 dark:text-neutral-400 flex-grow">{course.description}</p>
-                  
+                  <div className="mt-6 border-t border-gray-700 pt-4 flex items-center justify-between">
+                    <div className="flex items-center space-x-2">
+                      <span className="text-indigo-400 font-medium">
+                        ${course.price}
+                      </span>
+                      <span className="text-gray-500 text-sm">
+                        • {course.instructor}
+                      </span>
+                    </div>
+                    <button className="text-indigo-400 hover:text-indigo-300 transition-colors text-sm font-medium">
+                      Explore →
+                    </button>
+                  </div>
                 </div>
-
               </div>
             </div>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   )
 }
