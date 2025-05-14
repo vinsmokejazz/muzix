@@ -1,5 +1,7 @@
+import Link from "next/link"
 import courseData from "../data/music_courses.json"
 import { GlowingEffect } from "./ui/glowing-effect"
+import { Button } from "./ui/moving-border"
 
 interface Course {
   id: number,
@@ -76,6 +78,12 @@ export default function FeaturedCourses() {
           ))}
         </div>
       </div>
+
+      <div className="mt-12 text-center">
+            <Link href={"/courses"}>
+            <Button >View All courses</Button>
+            </Link>
+        </div>
     </section>
   )
 }
