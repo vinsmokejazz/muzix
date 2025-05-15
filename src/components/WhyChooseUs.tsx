@@ -38,6 +38,6 @@ const musicSchoolContent = [
 export default function WhyChooseUs() {
 
   return <div>
-    <StickyScroll content={musicSchoolContent}/>
+    <StickyScroll content={musicSchoolContent} />
   </div>
 }
