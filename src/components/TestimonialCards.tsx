@@ -1,5 +1,5 @@
 "use client";
- import { cn } from "@/utils/cn";
+import { cn } from "@/utils/cn";
 import React, { useEffect, useState } from "react";
 import { InfiniteMovingCards } from "./ui/infinite-moving-cards";
 
@@ -51,7 +51,7 @@ export default function TestimonialCards() {
         )}
       />
       <div className="text-center">
-         <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black"></div>
+        <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black"></div>
         <h2 className=" relative z-20 bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text py-8 text-4xl font-bold text-transparent sm:text-6xl">Hear Our Harmony!</h2>
       </div>
       <InfiniteMovingCards
@@ -59,7 +59,7 @@ export default function TestimonialCards() {
         direction="right"
         speed="slow"
       />
-      
+
     </div>
   )
 }
