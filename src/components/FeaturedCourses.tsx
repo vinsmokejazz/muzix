@@ -80,10 +80,10 @@ export default function FeaturedCourses() {
       </div>
 
       <div className="mt-12 text-center">
-            <Link href={"/courses"}>
-            <Button >View All courses</Button>
-            </Link>
-        </div>
+        <Link href={"/courses"}>
+          <Button >View All courses</Button>
+        </Link>
+      </div>
     </section>
   )
 }
