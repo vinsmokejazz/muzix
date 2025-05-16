@@ -11,10 +11,11 @@
   "dependencies": {
     "clsx": "^2.1.1",
     "framer-motion": "^12.11.0",
-    "motion": "^12.11.0",
+    "motion": "^12.12.1",
     "next": "^15.3.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "simplex-noise": "^4.0.3",
     "tailwind-merge": "^3.3.0",
     "tailwindcss-text-stroke": "^0.0.5"
   },
