@@ -73,7 +73,7 @@ export default function UpcominWebinars() {
         <div className="mt-10 text-center">
           <Link href={"/"}
           >
-            <Button>View All Webinars</Button>
+            <Button className="bg-black">View All Webinars</Button>
           </Link>
         </div>
       </div>
