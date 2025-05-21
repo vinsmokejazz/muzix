@@ -130,7 +130,7 @@ export const CardItem = ({
 
   useEffect(() => {
     handleAnimations();
-  }, [isMouseEntered]);
+  }, [isMouseEntered, handleAnimations]);
 
   return (
     <Tag
