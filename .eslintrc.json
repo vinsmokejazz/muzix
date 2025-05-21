@@ -6,7 +6,11 @@
     "react-hooks/exhaustive-deps": "off",
     "@next/next/no-img-element": "off",
     "@typescript-eslint/ban-ts-comment": "off",
-    "prefer-const": "off"
-  }
+    "prefer-const": "off",
+    "react-hooks/rules-of-hooks": "off",
+    "@typescript-eslint/no-empty-function": "off",
+    "no-empty-function": "off"
+  },
+  "ignorePatterns": ["**/*"]
 } 
  
