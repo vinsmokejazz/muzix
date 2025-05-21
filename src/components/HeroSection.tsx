@@ -23,7 +23,7 @@ export default function HeroSection() {
       <p className="mt-4 font-normal text-base md:text-lg text-neutral-300
       max-w-lg mx-auto">
         Dive into music courses and transform your musical journey today.
-        whether you're a beginner or looking to refine your skills, join us unlock true potential.
+        whether you&rsquo;re  a beginner or looking to refine your skills, join us unlock true potential.
       </p>
 
       <div className="mt-4">
